@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" async></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" async></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+
+  <title>SudoCode</title>
+
+  <link rel="stylesheet" href="/stylesheets/landing.css" />
+
+</head>
+
+<body>
+
+  <section id="fcov" class="parallax text-white font-large">
+
+      <nav class="navbar navbar-expand-md">
+          <div class="container">
+            <div class="">
+                <a href="#fcov" class="navbar-brand">#SudoCode</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars navbar-toggler-icon"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav  ml-auto">
+                    <a class="nav-link" href="#introduction">Introduction</a>
+                    <a class="nav-link nav-link" href="#work">Features</a>
+                    <a class="nav-link" id="reg-lnk" href="#register">Register</a>
+                    <a class="nav-link" id="login-lnk" href="#register">Login</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"  data-target="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Tools
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="nav-link dropdown-link" href="/editor">Editor</a></li>
+                          <li><a class="nav-link dropdown-link" href="/light">Formatter</a></li>
+                      </ul>
+                    </li>
+                </div>
+            </div>
+          </div>
+      </nav>
+
+
+    <div class="text-center fcov-text-container">
+      <div class="fcov-text-container-inner">
+        <h2 class="fcov-title">SudoCode</h2>
+        <p>
+          An online coding platform
+        </p>
+      </div>
+    </div>
+
+    <div class="intro-next">
+      <a href="#introduction" class="text-center down-arrow-link">
+        <i class="fas fa-caret-down down-arrow"></i>
+      </a>
+    </div>
+  </section>
+
+  <div class="container mn">
+    <section id="introduction" class="section-pad-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 term">
+              <div class=titleBar>
+                  <div class="termButton"></div>
+                  <div class="termButton minimiseBtn"></div>
+                  <div class="termButton maxbtn"></div>
+                </div>
+                <div class="termScreen">
+                  <img src="/images/bg-term.gif" alt="Image" class="img-fluid" />
+                </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="intro-text-container">
+              <h2 class="mb-4 section-title">Introduction</h2>
+              <p class="mb-4 intro-text">
+                SudoCode is a <strong> collection of tools</strong> on the web which allow you to write,
+                format and run your code online
+              </p>
+              <p class="mb-5 intro-text">
+                Currently, only C and C++ are fully supported. More languages may be added in future.
+
+              </p>
+              <div>
+                <a href="#work" class="intro-text">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" class="section-pad-top">
+        <div class="row section-pad-top">
+
+              <div class="text-center col-12">
+                <h2 class="section-title mb-4">Features</h2>
+                <p>Top features</p>
+              </div>
+              <div class="col-lg-4">
+                  <i class="fas fa-4x fa-edit text-center fa-cust-icon"></i>
+                  <h4 class="text-center mb-4"><a class="body-link" href="/editor">Online Editor</a></h4>
+                  <p>
+                    A fast, feature packed code editor with syntax highlighting,
+                    automatic indentation and live syntax checking*
+                  </p>
+                </div>
+
+                <div class="col-lg-4 mt-5 mt-lg-0">
+                  <i class="fas fa-4x fa-code text-center fa-cust-icon"></i>
+                  <h4 class="text-center mb-4"><a class="body-link" href="/light">Code Formatter</a></h4>
+                  <p>
+                    Ever open a source file in editor and realize that the code isn't properly formatted?
+                    Just select your coding style and press Format!
+                  </p>
+                </div>
+                <div class="col-lg-4 mt-5 mt-lg-0">
+                  <i class="fas fa-4x fa-terminal text-center fa-cust-icon"></i>
+                  <h4 class="text-center mb-4">Run code</h4>
+                  <p>
+                    After you have finished writing code, run it online and view the output
+                  </p>
+                </div>
+            </div>
+
+      <div class="container section-pad-top">
+
+
+      </div>
+    </section>
+
+    <section id="auth-forms" class="parallax-2">
+      <div class="container">
+        <div class="row">
+
+            <div class="container mt-3 authtabs">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                  <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" data-target="#register">Register</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab"  data-target="#login">Login</a>
+                  </li>
+                </ul>
+
+                <div class="tab-content">
+                  <div id="register" class="container tab-pane active loginForm"><br>
+
+                      <form id="regFor" method="POST" action=/user/new>
+                        <div>
+                          <p></p>
+                          <p><input class="fas" placeholder="&#xf007; Username" type="text" name="Username" required /></p>
+                          <p></p>
+                          <p><input class="fas" placeholder="&#xf0e0; Email" type="email" name="email" required /></p>
+                          <p></p>
+                          <p><input class="fas" placeholder="&#xf084; Password" name="password" type="password" required /></p>
+                        </div>
+
+                        <div>
+                          <input type="submit" value="Create account" class="submitBtn">
+                        </div>
+
+                      </form>
+
+                  </div>
+                  <div id="login" class="container tab-pane fade loginForm"><br>
+
+                      <form id="loginFor" method="POST" action=/user/login>
+                        <div>
+                          <p></p>
+                          <p><input class="fas" placeholder="&#xf007; username" type="text" name="username" required /></p>
+                          <p></p>
+                          <p><input class="fas" placeholder="&#xf084; password" name="password" type="password" /></p>
+                        </div>
+
+                        <div>
+                          <input type="submit" value="Log In" class="submitBtn">
+                        </div>
+
+                      </form>
+                      <span class="forgot-psw"><a href="/user/forgot" >Forgot password?</a></span>
+                    </div>
+
+                </div>
+              </div>
+          </div>
+
+          <footer class="text-center small">
+            <p class="mb-1">
+              2019 | SudoCode
+            </p>
+            <p class="mb-1">
+              image credits : unsplash.com
+            </p>
+            <a href="#"><i class = "fas fa-home"></i></a>
+          </footer>
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+  <script>
+      function set_parallax_pos($doc, multiplier, $object) {
+          let offset = 480;
+          let windowHeight = window.innerHeight;
+          if (windowHeight > 500) {
+              offset = 400;
+          }
+          if (windowHeight > 680) {
+              offset = 300
+          }
+          if (windowHeight > 830) {
+              offset = 210;
+          }
+          var from_top = $doc.scrollTop(),
+              bg_css = 'center ' + (multiplier * from_top - offset) + 'px';
+          $object.css({
+              "background-position": bg_css
+          });
+      }
+      // parallax function
+      var bg_img_parallax = function ($object, multiplier, forceSet) {
+          multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+          multiplier = 1 - multiplier;
+          var $doc = $(document);
+          if (forceSet) {
+              set_parallax_pos($doc, multiplier, $object);
+          }
+          else {
+              $(window).scroll(function () {
+                  set_parallax_pos($doc, multiplier, $object);
+              });
+          }
+      };
+
+      var bg_img_parallax_2 = function ($object, multiplier) {
+          multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+          multiplier = 1 - multiplier;
+          var $doc = $(document);
+          $object.css({
+              "background-attachment": "fixed"
+          });
+          $(window).scroll(function () {
+              var firstTop = $object.offset().top,
+                  pos = $(window).scrollTop(),
+                  Ypos = Math.round((multiplier * (firstTop - pos)) - 186);
+              var bg_css = 'center ' + Ypos + 'px';
+              $object.css({
+                  "background-position": bg_css
+              });
+          });
+      };
+
+      $(function () {
+          bg_img_parallax($(".parallax"), 0.30, false);
+          bg_img_parallax_2($("#auth-forms"), 0.80);
+
+          window.addEventListener('resize', function () {
+              bg_img_parallax($(".parallax"), 0.30, true);
+          }, true);
+
+          $(window).scroll(function (e) {
+              if ($(document).scrollTop() > 120) {
+                  $('.navbar').addClass("scroll");
+              }
+              else {
+                  $('.navbar').removeClass("scroll");
+              }
+          });
+
+          $("a").on('click', function (event) {
+              if (this.hash !== "") {
+                  event.preventDefault();
+                  var hash = this.hash;
+
+                  $('html, body').animate({
+                      scrollTop: $(hash).offset().top
+                  }, 300, function () {
+                      window.location.hash = hash;
+                  });
+              }
+          });
+
+      });
+  </script>
+</body>
+
+</html>
