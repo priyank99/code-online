@@ -13,11 +13,7 @@ router.get('/editor', function (req, res, next) {
     title: 'CPP Editor',
   });
 });
-router.get('/run', function (req, res, next) {
-  res.render('editor', {
-    title: 'CPP Editor',
-  });
-});
+
 router.post('/format', function (req, res, next) {
   console.log(req.body);
   //console.log(req.body.code);
@@ -65,7 +61,7 @@ router.post('/light', function (req, res, next) {
     dataString += data.toString();
   });
   cfprocess.stdout.on('end', function () {
-    console.log(dataString);
+    console.log("out: " + dataString);
     res.render('light-format', {
       title: 'CPP Formatter',
       codebuffer: dataString,
@@ -82,15 +78,6 @@ router.get('/login', function (req, res, next) {
     error : "",
     success : "",
   });
-});
-router.get('/cppcheck', function (req, res, next) {
-    res.status(501).send();
-});
-router.get('/pyrun', function (req, res, next) {
-    res.status(501).send();
-});
-router.get('/pycoverage', function (req, res, next) {
-    res.status(501).send();
 });
 
 module.exports = router;

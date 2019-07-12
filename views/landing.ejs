@@ -18,11 +18,11 @@
 </head>
 
 <body>
-
+ 
   <section id="fcov" class="parallax text-white font-large">
 
       <nav class="navbar navbar-expand-md">
-          <div class="container">
+          <div class="container"> 
             <div class="">
                 <a href="#fcov" class="navbar-brand">#SudoCode</a>
             </div>
@@ -32,7 +32,7 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav  ml-auto">
                     <a class="nav-link" href="#introduction">Introduction</a>
-                    <a class="nav-link nav-link" href="#work">Features</a>
+                    <a class="nav-link nav-link" href="#features">Features</a>
                     <a class="nav-link" id="reg-lnk" href="#register">Register</a>
                     <a class="nav-link" id="login-lnk" href="#register">Login</a>
                     <li class="nav-item dropdown">
@@ -42,14 +42,15 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                           <li><a class="nav-link dropdown-link" href="/editor">Editor</a></li>
                           <li><a class="nav-link dropdown-link" href="/light">Formatter</a></li>
+                          <li><a class="nav-link dropdown-link" href="/run">Run Code</a></li>
                       </ul>
-                    </li>
+                    </li> 
                 </div>
             </div>
           </div>
       </nav>
-
-
+    
+    
     <div class="text-center fcov-text-container">
       <div class="fcov-text-container-inner">
         <h2 class="fcov-title">SudoCode</h2>
@@ -89,19 +90,19 @@
               </p>
               <p class="mb-5 intro-text">
                 Currently, only C and C++ are fully supported. More languages may be added in future.
-
+                
               </p>
               <div>
-                <a href="#work" class="intro-text">Read More</a>
+                <a href="#features" class="intro-text">Read More</a>
               </div>
             </div>
           </div>
         </div>
       </section>
-
+      
       <section id="work" class="section-pad-top">
         <div class="row section-pad-top">
-
+          
               <div class="text-center col-12">
                 <h2 class="section-title mb-4">Features</h2>
                 <p>Top features</p>
@@ -114,7 +115,7 @@
                     automatic indentation and live syntax checking*
                   </p>
                 </div>
-
+      
                 <div class="col-lg-4 mt-5 mt-lg-0">
                   <i class="fas fa-4x fa-code text-center fa-cust-icon"></i>
                   <h4 class="text-center mb-4"><a class="body-link" href="/light">Code Formatter</a></h4>
@@ -131,7 +132,7 @@
                   </p>
                 </div>
             </div>
-
+ 
       <div class="container section-pad-top">
 
 
@@ -141,7 +142,7 @@
     <section id="auth-forms" class="parallax-2">
       <div class="container">
         <div class="row">
-
+ 
             <div class="container mt-3 authtabs">
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs">
@@ -152,10 +153,10 @@
                     <a class="nav-link" data-toggle="tab"  data-target="#login">Login</a>
                   </li>
                 </ul>
-
+              
                 <div class="tab-content">
                   <div id="register" class="container tab-pane active loginForm"><br>
-
+   
                       <form id="regFor" method="POST" action=/user/new>
                         <div>
                           <p></p>
@@ -165,11 +166,11 @@
                           <p></p>
                           <p><input class="fas" placeholder="&#xf084; Password" name="password" type="password" required /></p>
                         </div>
-
+              
                         <div>
                           <input type="submit" value="Create account" class="submitBtn">
                         </div>
-
+              
                       </form>
 
                   </div>
@@ -182,11 +183,11 @@
                           <p></p>
                           <p><input class="fas" placeholder="&#xf084; password" name="password" type="password" /></p>
                         </div>
-
+              
                         <div>
                           <input type="submit" value="Log In" class="submitBtn">
                         </div>
-
+              
                       </form>
                       <span class="forgot-psw"><a href="/user/forgot" >Forgot password?</a></span>
                     </div>
@@ -230,7 +231,7 @@
               "background-position": bg_css
           });
       }
-      // parallax function
+      // parallax function     
       var bg_img_parallax = function ($object, multiplier, forceSet) {
           multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
           multiplier = 1 - multiplier;

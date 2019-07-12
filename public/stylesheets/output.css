@@ -1,0 +1,50 @@
+
+#styleSelect,
+#langSelect
+{
+  padding: 0.35rem;
+}
+#output {
+
+  background-color: hsla(0, 3%, 10%, 1);
+  font-family: monospace;
+  min-width: 20rem;
+  overflow: auto;
+  margin: 1rem auto;
+  padding: 1rem;
+
+  border: 1px solid hsl(0, 0%, 30%);
+  
+}
+#status-box,
+#time-box
+ {
+  padding: 0 0.5em;
+}
+#output-box {
+  background-color: #2e3131;
+  padding: 0 0.5em;
+  border: 1px solid #c3c3c3;
+}
+
+
+#runBtn{
+  background-color: hsla(141, 34%, 66%, 1);
+}
+#submitBtn{
+  background-color: hsla(240, 34%, 66%, 1);
+
+}
+#runBtn,
+#submitBtn
+{
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+#submitBtn:hover,
+#runBtn:hover {
+  opacity: 0.8;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <noscript>
+        <meta http-equiv="refresh" content="0;url=/light">
+    </noscript>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/output.css' />
+
+</head>
+
+<body>
+
+    <noscript>
+        <div class="nojs_warn">
+            Your browser does not have javascript enabled.
+            <a href="/light">Basic version</a>
+        </div>
+    </noscript>
+    
+    <div class="main">
+        <h1><%= title %></h1>
+        <pre id="editor"></pre>
+        <br />
+        <span id="styleLabel">Style:</span>
+        <select name="style" id="styleSelect">
+            <option value="LLVM">LLVM</option>
+            <option value="Google">Google</option>
+            <option value="Chromium">Chromium</option>
+            <option value="Mozilla">Mozilla</option>
+            <option value="WebKit">WebKit</option>
+            <option value="file" selected="">Custom</option>
+        </select>
+        <span id="styleLabel"> Language:</span>
+        <select name="style" id="langSelect">
+            <option value="cpp">C++11</option>
+            <option value="py">Python 3</option>
+        </select>
+        <button id="submitBtn">Format!</button>
+        <button id="runBtn">Run!</button>
+        
+        <div id="output">
+            OUTPUT:
+            <p id="status-box"></p>
+            <p id="output-box"></p>
+            <p id="time-box"></p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.4/ace.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.4/ext-language_tools.js"></script>
+    <!--script src="/ace/ace.js"></script>
+    <script src="/ace/ext-language_tools.js"></script-->
+    <script src="/js/editor.js"></script>
+    <script src="/js/run-web.js"></script>
+
+</body>
+
+</html>

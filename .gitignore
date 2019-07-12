@@ -65,5 +65,7 @@ typings/
 *.7z
 *.zip
 
+# temp files
+temp/
 *.txt
 .clang-format
