@@ -9,6 +9,15 @@ router.get('/', function(req, res, next) {
 router.post('/new', function(req, res, next) {
   res.status(501).end();
 });
+
+router.get('/login', function (req, res, next) {
+  res.render('login', {
+    title: "",
+    error : "",
+    success : "",
+  });
+});
+
 router.post('/login', function(req, res, next) {
   res.status(501).end();
 });

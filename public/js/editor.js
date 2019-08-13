@@ -2,7 +2,7 @@ var editor = ace.edit("editor");
 editor.setTheme("ace/theme/monokai");
 
 $("#submitBtn").on('click', function () {
-    $.post("/format", {
+    $.post("/tools/format", {
             code: editor.getSession().getValue(),
             style: $('#styleSelect').val()
         },

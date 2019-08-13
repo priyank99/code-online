@@ -69,3 +69,6 @@ typings/
 temp/
 *.txt
 .clang-format
+
+# configuration
+config/

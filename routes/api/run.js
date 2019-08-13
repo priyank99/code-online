@@ -44,19 +44,17 @@ router.post('/cpp', function (req, res, next) {
             else if(err.code == 139){
                 response.err = "Segmentation fault";
             }
-            return res.send(response);
         }
         else{
             response.status = "Executed successfully";
             response.stdout = stdout;
             response.time = stderr.substr(0,4);
-            fs.unlink(fpath);
-            fs.unlink(cppfile);
             console.log(stderr.substr(0,4))
             //console.log(stdout)
-            return res.send(response);
         }
-        
+        console.log(cppfile)
+        fs.unlink(cppfile);
+        return res.send(response);
     });
     
 });
@@ -96,18 +94,17 @@ router.post('/py', function (req, res, next) {
             else if(err.code == 139){
                 response.err = "Segmentation fault";
             }
-            return res.send(response);
         }
         else{
             response.status = "Executed successfully";
             response.stdout = stdout;
             response.time = stderr.substr(0,4);
-            fs.unlink(pyfile);
             console.log(stderr.substr(0,4))
             //console.log(stdout)
-            return res.send(response);
         }
-        
+        console.log(pyfile)
+        fs.unlink(pyfile);
+        return res.send(response);
     });
     
 });
