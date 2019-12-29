@@ -10,6 +10,7 @@ router.get('/', function (req, res, next) {
 });
 
 router.use('/tools', toolsRouter);
+router.use('/api/run', programExecRouter);
 router.use('/run', programExecRouter);
 router.use('/user', usersRouter);
 

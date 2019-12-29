@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "nodemon ./bin/www",
-    "start": "node ./bin/www"
+    "start": "export DEBUG='cpprint:server' && node ./bin/www",
+    "debug": "export NODE_ENV= && export DEBUG='cpprint:server,app:*' && nodemon ./bin/www",
+    "vsdebug": "export NODE_ENV= && export DEBUG='cpprint:server,app:*' && nodemon --inspect ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",

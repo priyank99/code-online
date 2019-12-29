@@ -4,7 +4,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
-const { SERVER: SERVER_CONFIG } = require("./config");
+const debug = require('debug')('app:root')
 const app = express();
 
 // view engine setup

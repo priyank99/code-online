@@ -49,7 +49,7 @@ $("#runBtn").on('click', function () {
         },
         function (data) {
             console.log(data);
-            if(data.err){
+            if(data.err != '0'){
                 $("#status-box").html(data.err + "<br/> "); 
                 $("#output-box").html(data.stderr); 
             }
