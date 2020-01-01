@@ -1,0 +1,55 @@
+#styleSelect,
+#langSelect {
+  padding: 0.35rem;
+}
+
+#output {
+  background-color: hsla(0, 3%, 10%, 1);
+  font-family: monospace;
+  min-width: 20rem;
+  overflow: auto;
+  margin: 1rem auto;
+  padding: 1rem;
+  border: 1px solid hsl(0, 0%, 30%);
+}
+
+#output-box {
+  background-color: #2e3131;
+  border: 1px solid #c3c3c3;
+  color: rgb(200, 200, 200);
+}
+
+#output-text {
+  color: rgb(200, 200, 200);
+}
+
+#output-box,
+#time-box,
+#status-box {
+  padding: 0.3em;
+  font-size: 1rem;
+}
+
+#control-box {
+  padding: 1em;
+}
+
+#editor-box {
+  margin-right: 0em;
+}
+
+#runBtn,
+#submitBtn,
+#shareBtn {
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+#submitBtn:hover,
+#runBtn:hover,
+#shareBtn:hover {
+  opacity: 0.8;
+}

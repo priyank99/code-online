@@ -11,16 +11,6 @@ function getNanoId20(){
     return nid;
 }
 
-function getTimestamp(){
-    return ( ""  + Date.now() ) ;
-}
-function getUniqueFilename(){
-    return ( "" + Date.now() + Math.random().toString(36).substr(2) + Math.random().toString(36).substr(2) ) ;
-}
-function getUniqueFilename20(){
-    return getNanoId20();
-}
-
 function testGenerator(generator, n){
     for(let i=0; i<n; i+=1){
         let rn = generator();
@@ -29,4 +19,4 @@ function testGenerator(generator, n){
 }
 // testGenerator(getUniqueFilename, 10);
 
-module.exports = {  getUniqueFilename, getNanoId10, getNanoId20 } 
+module.exports = { getNanoId10, getNanoId20 } 

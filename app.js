@@ -6,7 +6,7 @@ const logger = require('morgan');
 
 const debug = require('debug')('app:root')
 const app = express();
-
+require("./database");
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

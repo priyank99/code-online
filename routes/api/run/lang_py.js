@@ -43,8 +43,8 @@ async function runCode(code_string){
         const { stdout, stderr } = await exec(extcall);
         response.status = "Executed successfully";
         response.stdout = stdout;
-        response.time = stderr.substr(0,4);
-        debug(stderr.substr(0,4))
+        response.time = stderr.substr(22,5);    // get total time elapsed
+        debug(stderr.substr(22,5))
 
         debug("stdout: ", stdout)
         debug("stderr", stderr)
@@ -62,7 +62,7 @@ async function runCode(code_string){
 
         let stderrLines = error.stderr
         let resErr = stderrLines.split('\n').slice(0, -3).join("\n")
-        let resTime = stderrLines.split('\n').splice(-3, 1).join().substr(0,4)
+        let resTime = stderrLines.split('\n').splice(-3, 1).join().substr(22,5)
 
         // debug(resErr)
         // debug(resTime)

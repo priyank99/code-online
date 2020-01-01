@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <noscript>
+        <meta http-equiv="refresh" content="0;url=/light">
+    </noscript>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/shared-editor.css' />
+
+</head>
+
+<body>
+
+    <noscript>
+        <div class="nojs_warn">
+            Your browser does not have javascript enabled.
+            <a href="/light">Basic version</a>
+        </div>
+    </noscript>
+
+    <div class="main">
+        <h1><%= header %></h1>
+
+        <div class="container-fluid">
+            <div class="row" id="editor-box">
+                <div class="col-lg-10">
+                    <pre id="editor"></pre>
+                    <br />
+                </div>
+                <div id="control-box" class="col-lg-2" style="background-color:black;">
+
+                    <div class="form-group">
+                        <label for="styleSelect">Style:</label>
+                        <select name="style" id="styleSelect" class="form-control">
+                            <option value="LLVM">LLVM</option>
+                            <option value="Google">Google</option>
+                            <option value="Chromium">Chromium</option>
+                            <option value="Mozilla">Mozilla</option>
+                            <option value="WebKit">WebKit</option>
+                            <option value="file" selected="">Custom</option>
+                        </select>
+                        <button class="btn btn-dark" id="submitBtn">Format</button>
+                    </div>
+
+                    <div class="form-group">
+                        <!-- <span> Language:</span> -->
+                        <label for="langSelect">Language:</label>
+                        <select name="language" id="langSelect"  class="form-control">
+                            <option value="cpp">C++11</option>
+                            <option value="python3">Python 3</option>
+                        </select>
+                        <button class="btn btn-success" id="runBtn">Run</button>
+                        <button class="btn btn-info" class="bg-primary" id="shareBtn">Share</button>
+                    </div>
+
+                    <div class="card" id="link-box">
+                        <div class="card-body bg-dark">
+                            <p id="link-text"></p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="output">
+                <h6>OUTPUT:</h6>
+                <div id="status-box"></div>
+                <div id="output-box">
+                    <pre id="output-text">
+                        
+                    </pre>
+                </div>
+                <div id="time-box"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.4/ace.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.4/ext-language_tools.js"></script>
+
+    <script src="/js/editor.js"></script>
+    <script src="/js/shared-web.js"></script>
+
+    <script>
+        <% if (locals.code_id) { %>
+        let api_url = window.location.origin +'/api/share/c/'+ "<%= code_id %>";
+        let page_url = window.location.href;
+        $.get(api_url,
+            function (data) {
+                console.log(data);
+                if(data.language != null){
+                    $("select#langSelect").val(data.language);
+                    $("#link-text").html(`<a href=${page_url}>${page_url}</a>`); 
+                    $("#link-box").show(); 
+                    $("#output-text").html(data.stdout); 
+                    editor.setValue(data.code_text, 1);
+                    
+                    if (data.stdout.length === 0){
+                        $("#output-text").html("<br>");
+                    }
+                }
+            }
+        );
+        <% } else { %>
+            $("#link-box").hide(); 
+            $("#output-text").html("<br>"); 
+        <% }  %>
+    </script>
+
+</body>
+
+</html>

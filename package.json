@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "nodemon ./bin/www",
     "start": "export DEBUG='cpprint:server' && node ./bin/www",
-    "debug": "export NODE_ENV= && export DEBUG='cpprint:server,app:*' && nodemon ./bin/www",
+    "debug": "export NODE_ENV= && export DEBUG='cpprint:server,app:*,mdb:*' && nodemon ./bin/www",
     "vsdebug": "export NODE_ENV= && export DEBUG='cpprint:server,app:*' && nodemon --inspect ./bin/www"
   },
   "dependencies": {
@@ -15,7 +15,9 @@
     "express": "~4.16.0",
     "fs-extra": "^8.1.0",
     "http-errors": "~1.6.2",
+    "mongoose": "^5.8.3",
     "morgan": "~1.9.0",
+    "nanoid": "^2.1.8",
     "nodemon": "^1.19.1"
   }
 }
