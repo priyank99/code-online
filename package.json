@@ -17,7 +17,7 @@
     "http-errors": "~1.6.2",
     "mongoose": "^5.8.3",
     "morgan": "~1.9.0",
-    "nanoid": "^2.1.8",
+    "nanoid": "^3.1.31",
     "nodemon": "^1.19.4"
   }
 }
